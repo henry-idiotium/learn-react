@@ -1,0 +1,11 @@
+query GetAuthInfo($request: AuthInfoRequestInput) {
+	authInfo(request: $request) {
+		message
+		timeStamp
+		data {
+			id
+			email
+			userName
+		}
+	}
+}

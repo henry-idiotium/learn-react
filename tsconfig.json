@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "target": "ESNext",
     "lib": [
       "DOM",
@@ -8,6 +9,8 @@
       "ScriptHost",
       "ES2016.Array.Include"
     ],
+    "checkJs": true,
+    "outDir": "target",
     "module": "commonjs",
     "moduleResolution": "node",
     "strict": true,
@@ -23,6 +26,12 @@
     "isolatedModules": true,
     "jsx": "react"
   },
+  "exclude": [
+    "./postcss.config.js",
+    "./tailwind.config.js",
+    "node_modules",
+    "target"
+  ],
   "include": [
     "src"
   ]

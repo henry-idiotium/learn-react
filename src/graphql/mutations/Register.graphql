@@ -1,0 +1,6 @@
+mutation Register($request: RegisterRequestInput) {
+	register(request: $request) {
+		message
+		timeStamp
+	}
+}

@@ -1,0 +1,17 @@
+mutation RotateToken($request: TokenRotateRequestInput) {
+	rotate(request: $request) {
+		message
+		timeStamp
+		data {
+			refreshToken
+			accessToken {
+				token
+				expireAt
+			}
+			userInfo {
+				id
+				email
+			}
+		}
+	}
+}

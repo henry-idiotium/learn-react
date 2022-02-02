@@ -1,0 +1,6 @@
+mutation VerifyEmail($request: VerifyEmailRequestInput) {
+	verifyEmail(request: $request) {
+		message
+		timeStamp
+	}
+}

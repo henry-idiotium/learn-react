@@ -1,0 +1,19 @@
+query GetUsers($request: SieveModelInput, $authToken: String) {
+	users(request: $request, authToken: $authToken) {
+		message
+		timeStamp
+		data {
+			count
+			rows {
+				id
+				userName
+				firstName
+				lastName
+				email
+				dateOfBirth
+			}
+			currentPage
+			totalPages
+		}
+	}
+}

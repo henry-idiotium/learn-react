@@ -1,0 +1,17 @@
+mutation Login($request: LoginRequestInput) {
+	login(request: $request) {
+		message
+		timeStamp
+		data {
+			refreshToken
+			accessToken {
+				token
+				expireAt
+			}
+			userInfo {
+				id
+				email
+			}
+		}
+	}
+}
